@@ -1,4 +1,3 @@
-
 def print_result(result):
     if result < 50:
         return("Less then fifty")
@@ -13,33 +12,19 @@ def print_result(result):
     else:
         return("Something went wrong")
 
-def operation(selected):
-    if selected == 1:
-        return add
-    elif selected == 2:
-        return subtract
-    elif selected == 3:
-        return multiply
-    elif selected == 4:
-        return divide
+def calculate(first_number, operation, second_number):
+    if operation == 1:
+        return first_number + second_number
+    elif operation == 2:
+        return first_number - second_number
+    elif operation == 3:
+        return first_number * second_number
+    elif operation == 4:
+        return first_number / second_number
     else:
-        return modulo
-
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-    return x / y
-
-def modulo(x, Y):
-    return x % y
+        return first_number % second_number5
 
 first_number = int(input("Enter first number: "))
-select_operation = int(input("What operation? \nPress 1 for +\nPress 2 for -\nPress 3 for *\nPress 4 for/\n"))
+operation = int(input("What operation? \nPress 1 for addition\nPress 2 for subtraction\nPress 3 for multiplication\nPress 4 for division\n"))
 second_number = int(input("Enter second number: "))
+print(print_result(calculate(first_number, operation, second_number)))
