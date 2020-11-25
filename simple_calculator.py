@@ -15,16 +15,31 @@ def print_result(result):
 
 def operation(selected):
     if selected == 1:
-        return +
+        return add
     elif selected == 2:
-        return -
+        return subtract
     elif selected == 3:
-        return *
+        return multiply
     elif selected == 4:
-        return /
+        return divide
     else:
-        return %
+        return modulo
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    return x / y
+
+def modulo(x, Y):
+    return x % y
 
 first_number = int(input("Enter first number: "))
-select_operation = int(input("What operation? /nPress 1 for +/nPress 2 for -/n Press 3 for */Press 4 for /"))
+select_operation = int(input("What operation? \nPress 1 for +\nPress 2 for -\nPress 3 for *\nPress 4 for/\n"))
 second_number = int(input("Enter second number: "))
