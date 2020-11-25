@@ -1,3 +1,5 @@
+import this
+
 def print_result(result):
     if result < 50:
         return("Less then fifty")
@@ -12,19 +14,19 @@ def print_result(result):
     else:
         return("Something went wrong")
 
-def calculate(first_number, operation, second_number):
-    if operation == 1:
+def calculate(first_number, second_number, operation):
+    if operation == "+":
         return first_number + second_number
-    elif operation == 2:
+    elif operation == "-":
         return first_number - second_number
-    elif operation == 3:
+    elif operation == "*":
         return first_number * second_number
-    elif operation == 4:
+    elif operation == "/":
         return first_number / second_number
     else:
         return first_number % second_number5
 
 first_number = int(input("Enter first number: "))
-operation = int(input("What operation? \nPress 1 for addition\nPress 2 for subtraction\nPress 3 for multiplication\nPress 4 for division\n"))
+operation = input("Select +, -, * or /\n")
 second_number = int(input("Enter second number: "))
-print(print_result(calculate(first_number, operation, second_number)))
+print(print_result(calculate(first_number, second_number, operation)))
